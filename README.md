@@ -7,16 +7,16 @@
   ### КОМАНДЫ ЗАПУСКАЕМЫЕ ОТДЕЛЬНО
 
   `npm run imagesAll` - обработка изображений
-    - результат в src/zpass/img/
+  - результат в src/zpass/img/
 
   `npm run sprite` - создание SVG спрайта
-    - исходники в src/img/svgicons/
-    - результат в src/zpass/svgicons/
+  - исходники в src/img/svgicons/
+  - результат в src/zpass/svgicons/
 
   `npm run fonts` - шрифты
-    перед запуском _удалить_ `src/scss/fonts.scss`
-    - исходники в src/fonst
-    - результат в src/zpass/fonts
+  - перед запуском _удалить_ `src/scss/fonts.scss`
+  - исходники в src/fonst
+  - результат в src/zpass/fonts
 
 ## СОЗДАНИЕ НОВОГО ПРОЕКТА ( перенос )
 
@@ -46,6 +46,7 @@
 │   ├── js                        # папка для JS файлов
 │   │   └── app.min.js            # сжатый файл
 │   └──  index.html               # HTML файл
+│
 ├── node_modules                  # "системная"
 │
 ├── gulp                          # папка с вспомогательными файлами
@@ -89,6 +90,7 @@
 │   │       └── stack             # -- инструкця
 │   ├── index.html                # Главный html-файл
 │   └── index.pug                 # Главный pug-файл
+│
 ├── gulpfile.js                   # файл с настройками Gulp
 ├── package-lock.json             # "системный"
 ├── package.json                  # файл с настройками сборки и установленными пакетами
@@ -179,7 +181,6 @@
   "@scss": "${folder}/src/scss", // alias for scss
   "@js": "${folder}/src/js", // alias for js
 },
-
  ```
  - теперь например `@img` будет заменяться на `./src/img`
  
