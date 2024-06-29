@@ -148,7 +148,8 @@
 - создаем соответствующие файлы _*.pug_  
 - npm i -D gulp-pug              // установка Pug
 
-- sass gulp-sass                 // Препроцесор SASS и установщик его в Gulp
+- sass                           // Препроцесор SASS 
+- gulp-sass                      // и установщик его (SASS) в Gulp
 - gulp-rename                    // Переименование файлов
 - gulp-clean-css                 // Сжатие CSS файла
 - gulp-webpcss                   // Вывод WEBP изображений
