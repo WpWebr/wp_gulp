@@ -69,9 +69,11 @@ export const fontsStyle = () => {
 
             switch (fontWeight.toLowerCase()) {
               case 'thin':
+              case 'hairline':
                 fontWeight = 100;
                 break;
               case 'extralight':
+              case 'ultralight':
                 fontWeight = 200;
                 break;
               case 'light':
@@ -81,19 +83,26 @@ export const fontsStyle = () => {
                 fontWeight = 500;
                 break;
               case 'semibold':
+              case 'demibold':
                 fontWeight = 600;
                 break;
               case 'bold':
                 fontWeight = 700;
                 break;
               case 'extrabold':
-              case 'heavy':
+              case 'ultrabold':
                 fontWeight = 800;
                 break;
               case 'black':
+              case 'heavy':
                 fontWeight = 900;
                 break;
+              case 'extrablack':
+              case 'ultrablack':
+                fontWeight = 950;
+                break;
               default:
+                //Normal (Regular)
                 fontWeight = 400;
             }
             // fs.appendFile(fontsFile,

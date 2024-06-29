@@ -13,7 +13,7 @@ global.app = {
   gulp: gulp,
   plugins: plugins,
 }
-
+ 
 // Импортируем задачи
 import { copy, copyfonts, copyImg, copyImages, copySprite } from './gulp/tasks/copy.js';
 import { reset } from './gulp/tasks/reset.js';
@@ -42,8 +42,8 @@ function watcher() {
 const imagesAll = gulp.series(images, images);
 
 // Перенос изображений в dist/images
-// const imagesCopy = gulp.series(copyImg, copySprite);
-const imagesCopy = gulp.series(copyImages, copySprite);
+// const imagesCopy = gulp.series(copyImg, copySprite); // копируем с обработкой
+const imagesCopy = gulp.series(copyImages, copySprite); // копируем напрямую без обработки
 
 // Шрифт - последовательная обработка
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);

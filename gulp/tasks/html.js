@@ -41,7 +41,7 @@ export const html = () => {
         })
       )
     )
-    .pipe(app.plugins.replace(/@img\//g, 'images/')) // заменяем `@img/` на `images/`
+    .pipe(app.plugins.replace(/@img\//g, './images/')) // заменяем `@img/` на `images/`
     // начали - добавляем <picture>
     // .pipe(htmlmin()) // сжимаем
     // .pipe(pictureHTML( // добавляем <picture>
