@@ -1,21 +1,22 @@
 ### ОСНОВНЫЕ КОМАНДЫ
 
-  `npm run dev` или `gulp`   - запуск в режиме разработчика 
-  ( создание спрайта, обработка изображений и шрифтов здесь не запускается, а только переносится готовый резутьтат.. )
+  - запуск в режиме разработчика :
+  `npm run dev` или `gulp`
+  - создание спрайта, обработка изображений и шрифтов здесь не запускается, а только переносится готовый резутьтат.. 
 
   ## КОМАНДЫ ЗАПУСКАЕМЫЕ ОТДЕЛЬНО
 
   `npm run imagesAll` - обработка изображений
-    ( результат в src/zpass/img/ )
+    - результат в src/zpass/img/
 
   `npm run sprite` - создание SVG спрайта
-    ( исходники в src/img/svgicons/
-      результат в src/zpass/svgicons/ )
+    - исходники в src/img/svgicons/
+    - результат в src/zpass/svgicons/
 
   `npm run fonts` - шрифты
     перед запуском _удалить_ `src/scss/fonts.scss`
-    ( исходники в src/fonst
-      результат в src/zpass/fonts )
+    - исходники в src/fonst
+    - результат в src/zpass/fonts
 
 ### СОЗДАНИЕ НОВОГО ПРОЕКТА ( перенос )
 
@@ -26,7 +27,7 @@
   - package.json
   - README.md
   ## Запуск в новой папке команда:
-    npm i
+  - npm i
     
 ### СТРУКТУРА ПРОЭКТА
 
@@ -121,42 +122,43 @@
   ## Инициализация среды
   `npm init`
     В _package.json_ прописываем:
+    ```
       "main": "gulpfile.js",
       "type": "module",
-  
+    ```
   ## Установка плагинов ( npm i -D < название >)
-    gulp                     // Галп
-    del                      // для удаления/очистки
-    gulp-file-include        // для разбиения HTML на компоненты
-    gulp-replace             // Поиск и замена
-    (gulp-webp-html-nosvg    // Контейнер _picture_ для .webp формата картинок - gulp-picture-html - лучше :))
-    gulp-picture-html        // Контейнер _picture_ для .webp и .avif формата картинок
-    gulp-version-number      // Динамическая версия файла
-    gulp-plumber             // Обработка ошибок
-    gulp-notify              // Сообщения-подсказки
-    browser-sync             // Локальный сервер
+    - gulp                     // Галп
+    - del                      // для удаления/очистки
+    - gulp-file-include        // для разбиения HTML на компоненты
+    - gulp-replace             // Поиск и замена
+    - (gulp-webp-html-nosvg    // Контейнер _picture_ для .webp формата картинок - gulp-picture-html - лучше :))
+    - gulp-picture-html        // Контейнер _picture_ для .webp и .avif формата картинок
+    - gulp-version-number      // Динамическая версия файла
+    - gulp-plumber             // Обработка ошибок
+    - gulp-notify              // Сообщения-подсказки
+    - browser-sync             // Локальный сервер
   
   ## Преключение на использование .pug (если будем использовать)
   - в файле _/config/path.js_ в переменной `global.pug = 'html';` меняем `html` на `pug`  
   - создаем соответствующие файлы _*.pug_  
   - npm i -D gulp-pug                     // установка Pug
 
-  sass gulp-sass                 // Препроцесор SASS и установщик его в Gulp
-  gulp-rename                    // Переименование файлов
-  gulp-clean-css                 // Сжатие CSS файла
-  gulp-webpcss                   // Вывод WEBP изображений
-  webp-converter@2.2.3           // Конвертер в WEBP (версия `@2.2.3` для свазки с `gulp-webpcss`)
-  gulp-autoprefixer              // Добавление вендорных префиксов
-  gulp-group-css-media-queries   // Группировка медиа запросов
-  webpack webpack-stream         // Webpack и модуль webpack-stream
-  gulp-webp                      // Преобразование изображений в формат .webp
-  gulp-avif                      // Преобразование изображений в формат .avif
-  gulp-imagemin                  // Сжатие изображений
-  gulp-newer                     // Проверка наличия обновления
-  gulp-fonter gulp-ttf2woff2     // Преобразование шрифтов
-  gulp-svg-sprite                // Создание SVG спрайта
-  gulp-if                        // Условное ветвление
-  gulp-htmlmin                   // Сжатие HTML и др.
+  - sass gulp-sass                 // Препроцесор SASS и установщик его в Gulp
+  - gulp-rename                    // Переименование файлов
+  - gulp-clean-css                 // Сжатие CSS файла
+  - gulp-webpcss                   // Вывод WEBP изображений
+  - webp-converter@2.2.3           // Конвертер в WEBP (версия `@2.2.3` для свазки с `gulp-webpcss`)
+  - gulp-autoprefixer              // Добавление вендорных префиксов
+  - gulp-group-css-media-queries   // Группировка медиа запросов
+  - webpack webpack-stream         // Webpack и модуль webpack-stream
+  - gulp-webp                      // Преобразование изображений в формат .webp
+  - gulp-avif                      // Преобразование изображений в формат .avif
+  - gulp-imagemin                  // Сжатие изображений
+  - gulp-newer                     // Проверка наличия обновления
+  - gulp-fonter gulp-ttf2woff2     // Преобразование шрифтов
+  - gulp-svg-sprite                // Создание SVG спрайта
+  - gulp-if                        // Условное ветвление
+  - gulp-htmlmin                   // Сжатие HTML и др.
 
 ## Шрифты
   - Для обновления файла подключения шрифта
@@ -210,11 +212,6 @@
   - путь к изображениям `@img/`
 
 
-
-
-
-
-
 ## Подключение дополнений
   swiper // Слайдер Swiper https://swiperjs.com/get-started
 
@@ -222,29 +219,24 @@
   # режимы без создания спрайта и конвертации шрифтов
     ( папки с шрифтом ./src/fonts/ и спрайтом ./src/img/icons/ 
       если они есть преносятся в ./dist/ )
-  `npm run dev` или `gulp` - режим разработчика (по умолчанию)
+  - `npm run dev` или `gulp` - режим разработчика (по умолчанию)
 
   # режимы создания спрайта и конвертации шрифтов
-  `npm run sprite` - создание спрайта из SVG
-  `npm run fonts` - конвертация шрифтов в формат woff и woff2
-  `npm run all` - создание спрайта + конвертация шрифтов + режим разработчика 
-  `npm run imagesAll` - обработка изображений (результат в src/zpass/img/)
-
-
-
+  - `npm run sprite` - создание спрайта из SVG
+  - `npm run fonts` - конвертация шрифтов в формат woff и woff2
+  - `npm run all` - создание спрайта + конвертация шрифтов + режим разработчика 
+  - `npm run imagesAll` - обработка изображений (результат в src/zpass/img/)
 
 
   # В разработке
-  `npm run build` - режим продакшен
-  `npm run zip` - создание ZIP архива
-  `npm run deploy` - отправка проекта по FTP на сервер
+  - `npm run build` - режим продакшен
+  - `npm run zip` - создание ZIP архива
+  - `npm run deploy` - отправка проекта по FTP на сервер
   # Режим сдачи заказа (продакшен) для лендинга (максимальное сжатие всех файлов)
-  `npm run buildZ` - режим продакшен
-  `npm run zipZ` - создание ZIP архива
-  `npm run deployZ` - отправка проекта по FTP на сервер
+  - `npm run buildZ` - режим продакшен
+  - `npm run zipZ` - создание ZIP архива
+  - `npm run deployZ` - отправка проекта по FTP на сервер
   # Режим сдачи заказа (продакшен) для бэкенда (два варианта файлов сжатый и не сжатый)
-  `npm run buildB` - режим продакшен
-  `npm run zipB` - создание ZIP архива 
-  `npm run deployB` - отправка проекта по FTP на сервер
-
-
+  - `npm run buildB` - режим продакшен
+  - `npm run zipB` - создание ZIP архива 
+  - `npm run deployB` - отправка проекта по FTP на сервер
