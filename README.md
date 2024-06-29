@@ -114,10 +114,11 @@
     (если нет, то устанавливаем глобально `npm i gulp-cli -g`)
 
   ### Обновление
-    - node и npm
+  
+    #### node и npm
     Скачиваем и устанавливаем LTS версию: https://nodejs.org/  
 
-    - gulp
+    #### gulp
     `npm rm --global gulp`   - удаляем глобально
     `npm i gulp-cli -g`   - устанавливаем глобально
 
