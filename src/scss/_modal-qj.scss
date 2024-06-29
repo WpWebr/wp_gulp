@@ -1,0 +1,182 @@
+   body.losk {
+     overflow: hidden;
+     padding: 0 var(--sw) 0 0;
+
+     .scrol_top.active {
+       z-index: -1;
+     }
+   }
+
+   //  /* свойства модального */
+   .modal {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     //  /* фиксированное положение */
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.9);
+     //  /* цвет фона */
+     z-index: 99999;
+     opacity: 0;
+     //  /* по умолчанию модальное окно прозрачно */
+     transition: opacity 400ms ease-in;
+     //  /* анимация перехода */
+     pointer-events: none;
+
+     //  /* элемент невидим для событий мыши */
+    //  &__body {
+    //   //  padding: 20px 38px 56px;
+    //   margin: 0 0 0 50px;
+    //  }
+
+    //  &__title {
+    //   text-transform: uppercase;
+    //   line-height: 1.2;
+    //   font-size: 24px;
+    //  }
+
+     &__text {
+       font-size: 18px;
+     }
+
+     &__close {
+       position: absolute;
+       top: 10px;
+       right: 12px;
+       display: block;
+       padding: 12px;
+      //  width: 40px;
+       height: 40px;
+      //  background-image: url(../images/svg/close.svg);
+      //  background-repeat: no-repeat;
+       z-index: 9;
+
+       &:focus,
+       &:hover {
+         background-image: url(../images/svg/close-h.svg);
+       }
+     }
+
+     //  /* ширина модального окна и его отступы от экрана */
+     &__dialog {
+       position: relative;
+       width: auto;
+       //  margin: 64px 10px;
+     }
+
+     //  /* свойства для блока, содержащего контент модального окна */
+     &__content {
+       overflow: auto;
+       display: flex;
+      //  flex-direction: column;
+       max-height: calc((var(--vh) * 100) - 128px);
+       max-width: calc(100vw - 48px);
+       background-color: var(--pink);
+       //  background-clip: padding-box;
+       border-radius: .2px;
+       outline: 0;
+
+       // стилизация полосы прокрутки
+       &::-webkit-scrollbar {
+         width: 10px;
+       }
+
+       &::-webkit-scrollbar-track {
+         background-color: #e4e4e4;
+         border-radius: 10px;
+       }
+
+       &::-webkit-scrollbar-thumb {
+         background-color: var(--border);
+         border-radius: 10px;
+       }
+
+       // END стилизация полосы прокрутки
+
+
+
+     }
+
+     //  /* при отображении модального окно */
+     &.show {
+       opacity: 1;
+       pointer-events: auto;
+       overflow-y: auto;
+       // чтобы не дергалось :)
+       transform: translateX(calc(var(--sw)/2 * (-1)));
+     }
+
+   }
+
+
+
+
+   @media (min-width: 576px) {
+     .modal__dialog {
+      width: 100%;
+       max-width: 1200px;
+       //  margin: 30px auto;
+     }
+
+     .modal_video {
+       .modal__dialog {
+         max-width: 56vh;
+         //  margin: 30px auto;
+       }
+     }
+   }
+
+   @media (min-width: 768px) {
+     .modal-content {
+       box-shadow: 0 5px 15px rgba(0, 0, 0, .7);
+     }
+   }
+
+   @media (max-width: 900px) {
+     .modal {
+       &__content {
+         position: relative;
+       }
+
+       &__close {
+         top: 0px;
+         right: 0px;
+       }
+     }
+   }
+
+   @media (max-width: 768px) {
+     .modal {
+       &__dialog {
+         position: inherit;
+
+       }
+     }
+   }
+
+   @media (max-width: 425px) {
+     .modal {
+       &__close {
+         top: 0px;
+         right: 0px;
+         transform: scale(.7);
+       }
+
+       &__body {
+         padding: 20px;
+       }
+
+       &__title {
+         font-size: 16px;
+       }
+
+       &__text {
+         font-size: 15px;
+       }
+     }
+
+   }

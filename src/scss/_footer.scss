@@ -1,0 +1,393 @@
+.site-footer {
+  background-color: #19191A;
+  padding: 50px 0 16px;
+
+  .icon {
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    fill: #fff;
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+
+  &__container {
+    padding: 0 25px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: 'Lovelace';
+    text-align: center;
+    letter-spacing: 0em;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 15px 0 0;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 33px;
+    color: #fff;
+    font-size: 12px;
+
+    &-linck {
+      display: flex;
+      color: #fff;
+      margin: 15px 0 0;
+
+      p {
+        padding: 0 0 0 10px;
+      }
+    }
+
+    &-local {
+      padding: 0 40px 0 0;
+      margin: 20px 0 0;
+      letter-spacing: 0;
+      font-size: 12px;
+    }
+
+    &-lincks {
+      display: flex;
+      flex-wrap: wrap;
+      width: 35%;
+    }
+
+    &-title {
+      width: 100%;
+      line-height: 1.5;
+      letter-spacing: 0.2em;
+      font-size: 10px;
+      font-weight: 600;
+      color: #b51501;
+      text-transform: uppercase;
+    }
+  }
+
+  &__form {
+    width: 65%;
+
+  }
+
+
+  &__logo {
+    padding: 0 50px 0 0;
+    width: 35%;
+    justify-content: flex-start;
+
+    img {
+      max-width: 280px;
+    }
+
+    &-m {
+      display: none;
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 0 0 8px;
+  }
+
+  &__brend {
+    display: flex;
+    padding: 33px 0;
+
+    &-inst {
+      display: flex;
+      width: 65%;
+    }
+  }
+
+  &__lincks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0px 0 33px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 11px;
+
+    .linck-txt {
+      margin: 0 10px 0 0;
+    }
+
+    a {
+      color: #b51501;
+    }
+  }
+
+  &__info {
+    padding: 20px 0 0;
+
+    &-text {
+      color: #ffffff80;
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.8;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: #ffffff80;
+      text-decoration: underline;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.footer__form {
+  margin: 48px 0 0;
+}
+
+@media (max-width: 1200px) {
+
+  .site-footer {
+    &__container {
+      display: flex;
+      flex-direction: column;
+
+      .menu {
+        flex-direction: column;
+      }
+    }
+
+    &__contacts {
+      flex-direction: column;
+
+      &-lincks {
+        width: 100%;
+        max-width: 465px;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: center;
+      order: 0;
+    }
+
+    &__logo {
+      display: none;
+
+      &-m {
+        display: block;
+        max-width: 200px;
+      }
+    }
+
+    &__form {
+      width: 100%;
+      margin: 70px auto 40px;
+    }
+
+    &__contacts {
+      order: 3;
+      padding: 10px 0 33px;
+
+      &-lincks {
+        justify-content: space-between;
+      }
+
+      &-name {
+        font-size: 18px;
+        margin: 3px 0 0;
+      }
+
+      &-local {
+        font-size: 14px;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+
+    &__brend {
+      order: 2;
+      justify-content: center;
+
+      &-inst {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    &__image {
+      margin: 0 4px;
+    }
+
+    &__lincks {
+      order: 1;
+      flex-direction: column;
+      margin: 0 0 10px;
+    }
+
+    .linck {
+      width: 30px;
+
+      &-txt {
+        margin: 68px 0 15px;
+        font-size: 20px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      max-width: 400px;
+      margin: 24px auto;
+    }
+
+    &__info {
+      order: 4;
+    }
+  }
+
+  .footer__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-footer-container {
+    .menu {
+      flex-direction: column;
+    }
+
+  }
+}
+
+@media (max-width: 780px) {
+  .footer {
+    &__form {
+      margin: 20px 0 0;
+
+      &-content {
+        flex-direction: column;
+      }
+
+      [type=email],
+      [type=text],
+      [type=submit] {
+        margin: 22px 0 0;
+        height: 58px;
+        max-width: 330px;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+
+  }
+
+  .site-footer {
+    &__info {
+      padding: 0;
+      max-width: 350px;
+      margin: 0 auto;
+
+      span {
+        display: none;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__image:last-child {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .site-footer {
+    &__container {
+      padding: 0 10px;
+    }
+
+    &__lincks {
+      margin: 0;
+    }
+
+    .linck {
+      width: 20px;
+      margin: 0 3px;
+    }
+
+    &__brend {
+      padding: 26px 0;
+    }
+
+    &__contacts {
+      &-title {
+        font-size: 12px;
+      }
+
+      &-name {
+        font-size: 15px;
+      }
+
+      &-local {
+        font-size: 13px;
+      }
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+
+    .linck-txt {
+      font-size: 5vw;
+    }
+
+    &__form {
+      margin: 70px auto 40px;
+      padding: 0 30px;
+
+    }
+
+    &__info p {
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 1.2;
+      // margin: 24px auto 20px;
+    }
+
+  }
+
+  .footer__form {
+
+    & [type=email],
+    & [type=text] {
+      margin: 12px 0 0;
+      height: 54px;
+    }
+
+    & [type=submit] {
+      margin: 29px 0 0;
+
+    }
+
+    &-content>div {
+      margin-left: 0;
+    }
+  }
+}

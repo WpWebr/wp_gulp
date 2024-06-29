@@ -1,0 +1,82 @@
+// $px - значение в px (без px)
+// $s - округление (10 - десятых, 100 - сотых и т.д.)
+// $ed - единицы ($ed: vw)
+// $mw: 1920 ширина основного кнтейнера
+// Например: width: w(400,10,vw,1920);
+// floor - округление в меньшую сторону
+// &nbsp; - нерезрывный пробел
+@use "sass:math";
+@function w($px, $s: 10, $ed: vw, $mw: 1200) {
+  // @return calc(floor(calc(($px / $mw) * 100 * $s)) / $s)+$ed;
+  @return calc(floor(math.div($px, $mw) * 100 * $s)/$s)+$ed;
+}
+
+:root {
+  --border: #c1c1c4;
+  --accent: #b51501;
+  --whiite: #fff;
+  --text: #19191a;
+  --grey: #828289;
+  --dark: #111112;
+  --logo: #61384e;
+  --bac-sec: #f3f3f3;
+  --text-main: #0C1A1C;
+}
+
+// Прижать подвал
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // overflow-x: hidden;
+  background-color: #19191a;
+  color: #19191a;
+  // letter-spacing: 0.2em;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  
+}
+
+.site {
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.site-content {
+  flex-grow: 1;
+}
+
+// END Прижать подвал
+.site-main{
+  overflow: hidden;
+  position: relative;
+  min-height: calc(100vh - 70px);
+
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.icon,
+.image, .custom-logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg,
+  img{
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+}

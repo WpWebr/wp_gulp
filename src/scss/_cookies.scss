@@ -1,0 +1,36 @@
+.modal-cookies {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: calc(100vw - 40px);
+  max-width: 370px;
+  padding: 10px;
+  border-radius: 2px;
+  color: #fff;
+  line-height: normal;
+  box-shadow: 0 0px 10px 0 rgb(255 255 255 / 11%);
+  background-color: #000;
+  font-family: 'Helvetica Neue', Helvetica, Sans-serif;
+  font-size: 12px;
+  letter-spacing: .7px;
+  line-height: 1.4;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s ease-out;
+
+  &.active {
+    opacity: 1;
+    z-index: 9999;
+  }
+
+  &__text {
+    margin: 10px;
+  }
+
+  &__button {
+    margin: 10px;
+    border: 1px solid #fff;
+    padding: 1em 1.5em;
+    letter-spacing: 1.1px;
+  }
+}
